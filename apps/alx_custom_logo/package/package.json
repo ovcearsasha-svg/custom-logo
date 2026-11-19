@@ -1,0 +1,42 @@
+{
+  "name": "alx_custom_logo",
+  "version": "0.1.0",
+  "description": "Manual cluster-render diagnostics. No logo drawing.",
+  "private": true,
+  "main": "javascript/runner.js",
+  "mguHmi": [
+    "ID7"
+  ],
+  "oapAppSettings": {
+    "maxDiskUsage": 5242880,
+    "cpuLimit": 10,
+    "memoryThresholdKB": 65536,
+    "priority": "PRIO_MEDIUM",
+    "visibility": "FOREGROUND",
+    "latencyClass": "FOREGROUND",
+    "loggingId": "CLDG",
+    "userLoginRequired": false,
+    "backgroundPriority": 150,
+    "someipManifest": "manifest.json"
+  },
+  "files": [
+    "config",
+    "rhmiData",
+    "package.json",
+    "npm-shrinkwrap.json",
+    "permissions.json",
+    "javascript",
+    "manifest.json",
+    "LICENSE",
+    "LICENSE-MIT",
+    "NOTICE.md"
+  ],
+  "dependencies": {
+    "oap-sdk": "24.10.2"
+  },
+  "engines": {
+    "node": ">=8.16.2"
+  },
+  "author": "Alx887",
+  "license": "GPL-3.0-or-later"
+}

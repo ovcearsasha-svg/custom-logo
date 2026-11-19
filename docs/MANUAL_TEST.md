@@ -2,6 +2,12 @@
 
 ## Diagnostic supported in v0.1.0
 
+For Store use, follow [the no-SSH guide](STORE_INSTALL_RU.md). Verify install
+and opening the tile do not initiate a check. Press Check, inspect the report,
+test Stop and leaving/reopening the page, RU/EN and report pagination. Photograph
+idle, running, success/failure and stopped states. Removing the app must leave
+cluster-render and other apps intact. These on-car checks remain pending.
+
 1. Record vehicle, MGU firmware, DKOMBI variant, Node and installed renderer
    versions. Do not assume the installed renderer matches the reviewed commit.
 2. Park the vehicle. Photograph the baseline cluster and HUD. Keep an observer

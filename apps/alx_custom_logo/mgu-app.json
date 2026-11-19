@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "id": "alx_custom_logo",
+  "version": "0.1.0",
+  "mguHmi": ["ID7"],
+  "tree": "package",
+  "modules": ["src/entry.js", "src/app.js", "src/controller.js", "src/probe.js"],
+  "sdk": ["oap-sdk/src/core/OnlineApp.js", "oap-sdk/src/logging/logging"]
+}
