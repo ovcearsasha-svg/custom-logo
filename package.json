@@ -1,0 +1,9 @@
+{
+  "name": "bmw-custom-logo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Non-rendering compatibility probe for BMW MGU ID7 cluster-render",
+  "license": "MIT",
+  "engines": { "node": ">=8.16.2" },
+  "scripts": { "test": "node test/run.js && node test/store.js", "start": "node src/cli.js" }
+}

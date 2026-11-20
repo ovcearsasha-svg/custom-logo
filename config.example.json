@@ -1,0 +1,13 @@
+{
+  "target": "panel",
+  "imagePath": null,
+  "x": null,
+  "y": null,
+  "width": 32,
+  "height": 16,
+  "opacity": 0.5,
+  "testMode": true,
+  "logging": true,
+  "socket": "/dev/shm/cluster-render/render.sock",
+  "timeoutMs": 5000
+}

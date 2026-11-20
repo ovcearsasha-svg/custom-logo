@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "components": [{
+    "id": "alx_custom_logo",
+    "kind": "app",
+    "path": "apps/alx_custom_logo",
+    "build": "unit",
+    "title": "Custom Logo Diagnostics",
+    "description": "Manual cluster-render connection check. Does not display a logo or change vehicle settings.",
+    "mguHmi": ["ID7"],
+    "uninstallable": true
+  }]
+}
