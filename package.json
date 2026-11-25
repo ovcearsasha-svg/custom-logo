@@ -1,0 +1,10 @@
+{
+  "name": "custom-logo-local",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "prepare:logo": "python tools/prepare.py",
+    "test": "python tools/prepare.py && python -m unittest discover -s tests -p test_*.py && node tests/run.js",
+    "check": "python tools/prepare.py && node tools/local.js --check"
+  }
+}
