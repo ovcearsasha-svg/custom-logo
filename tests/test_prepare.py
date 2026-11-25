@@ -97,7 +97,8 @@ class PackageTests(unittest.TestCase):
             names = [c['name'] for state in ui['containers'].values() for c in state['components'].values()]
             self.assertIn('SAVE', names)
             self.assertIn('POSITION', names)
-            with tarfile.open(tmp / 'dist/custom_logo@0.2.0.tgz') as archive:
+            version = json.loads((ROOT / 'apps/custom_logo/app.json').read_text())['version']
+            with tarfile.open(tmp / ('dist/custom_logo@' + version + '.tgz')) as archive:
                 self.assertIn('package/javascript/cluster_render_client.js', archive.getnames())
 
     def test_original_logo_is_byte_identical(self):

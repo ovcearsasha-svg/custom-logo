@@ -65,7 +65,8 @@ ID7 `panel` — слот 0x203, 1920×720; `map` — 0x100, 1088×480.
 
 ## Store и жизненный цикл
 
-Используются выбранные неизменённые build tools из bimmer-lab App Kit. Их
+Используются выбранные build tools из bimmer-lab App Kit. В 0.2.1 добавлена
+проверка существования необязательной kit/runtime перед её чтением. Их
 [build.py](https://github.com/bimmer-lab/apps/blob/68a29e5a8bcc9ec71c0764b2598920b85a2f664a/kit/tools/build.py)
 преобразует `autostart: true` в `package.json: mguAppStartType: autostart`.
 [mgu-deploy.js](https://github.com/robertnisipeanu/mgu-store/blob/37702a880f1ed5fd346f4c944127fb276920be9c/deploy/unit/mgu-deploy.js)

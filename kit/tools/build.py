@@ -583,7 +583,8 @@ def build(app_id, language='en'):
                 json.dump(catalog(), file, ensure_ascii=False, separators=(',', ':'))
             pack_data.pack(temporary, os.path.join(src, 'javascript', 'diagnostic_i18n.pack'))
     kr = os.path.join(KIT, 'runtime')
-    for f in os.listdir(kr):
+    # Custom Logo has its own small runtime; a source upload may omit this empty folder.
+    for f in os.listdir(kr) if os.path.isdir(kr) else []:
         p = os.path.join(kr, f)
         if os.path.isdir(p):
             shutil.copytree(p, os.path.join(src, 'javascript', 'kit', f))

@@ -6,10 +6,11 @@ Source: https://github.com/robertnisipeanu/idrive-apps/blob/b0f823765d4b1c8369d7
 License: https://www.mozilla.org/MPL/2.0/
 The MPL applies to that file; it is not relicensed under MIT.
 
-Selected build-time MGU App Kit files are copied unchanged from bimmer-lab/apps
+Selected build-time MGU App Kit files are based on bimmer-lab/apps
 commit 68a29e5a8bcc9ec71c0764b2598920b85a2f664a, under MIT.
 See licenses/MGU-App-Kit-MIT.txt in the source distribution.
 Their graphical runtime is not included.
+Local change to kit/tools/build.py: tolerate an absent optional kit/runtime folder.
 
 No BMW SDK, firmware, RAMSES libraries or native renderer binary is distributed.
 assets/logo.png is the user-supplied BMW Motorsport M image, preserved byte-for-byte.

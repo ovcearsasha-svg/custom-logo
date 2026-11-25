@@ -1,0 +1,48 @@
+name: Test and publish source prerelease
+on:
+  push:
+    branches: [main]
+    paths: [release.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['8.16.2', '24']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '${{ matrix.node }}'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: npm test
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python tools/source_release.py
+      - name: Publish source archive only
+        env:
+          GH_TOKEN: '${{ github.token }}'
+          RELEASE_COMMIT: '${{ github.sha }}'
+        run: |
+          tag=$(python -c "import json; print(json.load(open('release.json'))['tag'])")
+          title=$(python -c "import json; print(json.load(open('release.json'))['title'])")
+          notes=$(python -c "import json; print(json.load(open('release.json'))['notes'])")
+          version=$(python -c "import json; print(json.load(open('apps/custom_logo/app.json'))['version'])")
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release already exists; leaving it unchanged."
+          else
+            gh release create "$tag" "dist/custom-logo-$version-source.zip" dist/SHA256SUMS.txt --target "$RELEASE_COMMIT" --title "$title" --notes-file "$notes" --prerelease
+          fi

@@ -1,6 +1,6 @@
 {
-  "tag": "v0.2.0",
-  "title": "Custom Logo 0.2.0 — меню положения и размера",
+  "tag": "v0.2.1",
+  "title": "Custom Logo 0.2.1 — исправление сборки Store",
   "prerelease": true,
-  "notes": "docs/RELEASE-0.2.0.md"
+  "notes": "docs/RELEASE-0.2.1.md"
 }

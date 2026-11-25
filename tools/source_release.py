@@ -1,5 +1,6 @@
 """Source-only release; never packages a BMW SDK or test .tgz."""
 import hashlib
+import json
 import subprocess
 from pathlib import Path
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
@@ -9,7 +10,8 @@ if __name__ == '__main__':
     prepare()
     out = ROOT / 'dist'
     out.mkdir(exist_ok=True)
-    target = out / 'custom-logo-0.2.0-source.zip'
+    version = json.loads((ROOT / 'apps/custom_logo/app.json').read_text(encoding='utf-8'))['version']
+    target = out / ('custom-logo-' + version + '-source.zip')
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
     generated = ['apps/custom_logo/logo-data.js', 'apps/custom_logo/logo-config.js']
     names = sorted(set(n for n in tracked + generated if n))
