@@ -1,0 +1,18 @@
+Custom Logo: original project code under the repository MIT license.
+
+cluster_render_client.js is an unmodified upstream file:
+Copyright (C) 2026 Robert Nisipeanu, MPL-2.0.
+Source: https://github.com/robertnisipeanu/idrive-apps/blob/b0f823765d4b1c8369d71982f797803414aad93e/native/cluster-render/js/cluster_render_client.js
+License: https://www.mozilla.org/MPL/2.0/
+The MPL applies to that file; it is not relicensed under MIT.
+
+Selected build-time MGU App Kit files are copied unchanged from bimmer-lab/apps
+commit 68a29e5a8bcc9ec71c0764b2598920b85a2f664a, under MIT.
+See licenses/MGU-App-Kit-MIT.txt in the source distribution.
+Their graphical runtime is not included.
+
+No BMW SDK, firmware, RAMSES libraries or native renderer binary is distributed.
+assets/logo.png is the user-supplied BMW Motorsport M image, preserved byte-for-byte.
+The code license does not claim rights to BMW trademarks or this artwork.
+Source SHA256: 6679a78891be1afcb3721429e1985bda6668b8d85c982071816c1f7a7048f765.
+The app tile diamond remains an original test/calibration asset.

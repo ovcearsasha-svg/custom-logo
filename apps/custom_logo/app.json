@@ -1,0 +1,33 @@
+{
+  "id": "custom_logo",
+  "title": "Custom Logo",
+  "description": "Static logo with native position, size and coordinate menu",
+  "version": "0.2.0",
+  "vendor": "ovcearsasha-svg",
+  "loggingId": "OACL",
+  "autostart": true,
+  "requires": { "cluster-render": "0.8.14" },
+  "uninstallable": true,
+  "mguHmi": ["ID7"],
+  "signals": {},
+  "screens": [{
+    "name": "MAIN", "kind": "list", "title": "Custom Logo",
+    "items": [
+      ["text", "POSITION", "X: 800   Y: -80"],
+      ["text", "SIZE", "320 x 320 px   Step: 5 px"],
+      ["text", "STATUS", "ON"],
+      ["button", "UP", "Вверх"],
+      ["button", "DOWN", "Вниз"],
+      ["button", "LEFT", "Влево"],
+      ["button", "RIGHT", "Вправо"],
+      ["button", "SMALLER", "Уменьшить"],
+      ["button", "LARGER", "Увеличить"],
+      ["button", "STEP", "Шаг: 1 / 5 / 10 / 20 px"],
+      ["button", "TOGGLE", "Показать / скрыть"],
+      ["button", "RESET", "Сбросить положение и размер"],
+      ["button", "SAVE", "Сохранить"]
+    ]
+  }],
+  "settings": [],
+  "config": {}
+}
